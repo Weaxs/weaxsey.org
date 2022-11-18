@@ -1,0 +1,25 @@
+languageCode = "zh-cn"
+languageName = "cn"
+displayName = "中"
+isoCode = "en"
+weight = 1
+rtl = false
+
+title = "豆逗子的小黑屋"
+# logo = "img/logo.png"
+description = "My awesome website"
+# copyright = "Copy, _right?_ :thinking_face:"
+
+dateFormat = "2 January 2006"
+
+[author]
+  name = "Weaxsey"
+  image = "img/blowfish_logo.png"
+  headline = "Hello and Fuck world."
+  bio = "Nothing to say."
+   links = [
+     { email = "459312872@qq.com" },
+     { github = "https://github.com/Weaxs" },
+     { steam = "https://steamcommunity.com/id/weaxs" },
+     { weibo = "https://weibo.com/u/5462117754" },
+   ]
