@@ -12,6 +12,7 @@ summaryLength = 30
 
 buildDrafts = false
 buildFuture = false
+baseURL = "https://weaxsey.org/"
 
 # googleAnalytics = "G-XXXXXXXXX"
 

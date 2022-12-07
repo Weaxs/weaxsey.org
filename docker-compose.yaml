@@ -1,0 +1,12 @@
+version: '3'
+services:
+  hugo_server:
+    image: klakegg/hugo:ext-alpine
+    command: server
+    volumes:
+      - ".:/src"
+    ports:
+      - "1313:1313"
+    environment:
+      HUGO_ENV: production
+    container_name: hugo-blowfish
