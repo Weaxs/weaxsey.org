@@ -4,6 +4,8 @@ Repo for my personal blog.
 
 个人博客仓库。
 
+搭建教程可以参考 [blowfish博客搭建](content/articels/博客搭建/index.md)
+
 ## Powered by: Blowfish
 
 Frameworks and Misc.

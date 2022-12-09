@@ -6,8 +6,9 @@
 # https://nunocoracao.github.io/blowfish/docs/configuration/#theme-parameters
 
 colorScheme = "blowfish"
-defaultAppearance = "light" # valid options: light or dark
-autoSwitchAppearance = true
+defaultAppearance = "dark" # valid options: light or dark
+autoSwitchAppearance = false
+defaultBackgroundImage = "img/elden-ring-backgroud.png"
 
 enableSearch = true
 enableCodeCopy = true
@@ -26,8 +27,8 @@ mainSections = ["articels", "recommend"]
   showScrollToTop = true
 
 [homepage]
-  layout = "profile" # valid options: page, profile, hero, card, background, custom
-  #homepageImage = "IMAGE.jpg" # used in: hero, and card
+  layout = "background" # valid options: page, profile, hero, card, background, custom
+  homepageImage = "img/elden-ring-backgroud.png" # used in: hero, and card
   showRecent = true
   showRecentItems = 5
   showMoreLink = true
@@ -37,13 +38,13 @@ mainSections = ["articels", "recommend"]
   layoutBackgroundBlur = false # only used when layout equals background
 
 [article]
-  showDate = true
+  showDate = false
   showViews = true
   showLikes = true
   showDateUpdated = false
   showAuthor = true
   showHero = true
-  heroStyle = "basic" # valid options: basic, big, background
+  heroStyle = "background" # valid options: basic, big, background
   showBreadcrumbs = true
   showDraftLabel = true
   showEdit = false
@@ -53,22 +54,28 @@ mainSections = ["articels", "recommend"]
   showHeadingAnchors = true
   showPagination = true
   invertPagination = false
-  showReadingTime = true
+  showReadingTime = false
   showTableOfContents = true
   showTaxonomies = false 
   showAuthorsBadges = false 
-  showWordCount = true
+  showWordCount = false
   showSummary = true
-  sharingLinks = [ "linkedin", "twitter", "whatsapp", "pinterest", "reddit", "facebook", "email"]
+  showComments = false
+  sharingLinks = [ "email", "weibo", "reddit", "twitter"]
+  layoutBackgroundBlur = true
+
 
 [list]
   showBreadcrumbs = false
-  showSummary = false
+  showSummary = true
   showTableOfContents = false
   showCards = false
-  groupByYear = true
+  groupByYear = false
   cardView = false
-  cardViewScreenWidth = false
+  cardViewScreenWidth = true
+  showHero = true
+  heroStyle = "background"
+  layoutBackgroundHeaderSpace = true
 
 [sitemap]
   excludedKinds = []

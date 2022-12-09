@@ -7,6 +7,4 @@ services:
       - ".:/src"
     ports:
       - "1313:1313"
-    environment:
-      HUGO_ENV: production
     container_name: hugo-blowfish

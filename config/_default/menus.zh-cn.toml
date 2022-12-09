@@ -11,6 +11,7 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
+  identifier = "文章"
   name = "文章"
   pageRef = "articels"
   weight = 10

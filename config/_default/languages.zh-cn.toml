@@ -6,20 +6,21 @@ weight = 1
 rtl = false
 
 title = "豆逗子的小黑屋"
-# logo = "img/logo.png"
+logo = "img/FF7cc.png"
 description = "My awesome website"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 dateFormat = "2006-01-02"
 
 [author]
-  name = "Weaxsey"
-  image = "img/blowfish_logo.png"
+  name = "Weaxs"
+  image = "img/Satoru Gojo.jpeg"
   headline = ""
   bio = ""
-   links = [
-     { email = "459312872@qq.com" },
-     { github = "https://github.com/Weaxs" },
-     { steam = "https://steamcommunity.com/id/weaxs" },
-     { weibo = "https://weibo.com/u/5462117754" },
-   ]
+  links = [
+    { email = "459312872@qq.com" },
+    { github = "https://github.com/Weaxs" },
+    { steam = "https://steamcommunity.com/id/weaxs" },
+    { weibo = "https://weibo.com/u/5462117754" },
+    { nintendo-switch = "SW-4890-9270-8324" },
+  ]
