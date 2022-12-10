@@ -7,7 +7,7 @@ layoutBackgroundHeaderSpace: false
 ---
 
 
-### hugo搭建
+## hugo搭建
 &emsp;&emsp;具体文件详见 [HUGO安装文档](https://gohugo.io/installation/)，下面主要解释一下docker部署的方式。
 {{< alert "circle-info">}}
 **docker镜像地址**：https://hub.docker.com/r/klakegg/hugo
@@ -107,7 +107,7 @@ docker镜像版本如下：
 
 > hugo模板可以参考 [https://themes.gohugo.io/](https://themes.gohugo.io/)
  
-### Blowfish模板使用
+## Blowfish模板使用
 
 &emsp;&emsp;Hugo的主题主要是用了blowfish，下面主要对blowfish的使用展开简要说明
 {{< alert "circle-info">}}
@@ -128,6 +128,9 @@ path = "github.com/nunocoracao/blowfish/v2"
 ```
 3. 将根目录引用到镜像内的/src目录下，启动docker即可
 
+
+### 自定义浏览器角标
+&emsp;&emsp;在[favicon.io](https://favicon.io/)讲自己的图片生成为各种尺寸的icon，直接解压在favicon.io下载好的icon压缩包，并放在/static目录下即可
+
+### blowfish文档
 &emsp;&emsp;使用blowfish搭建博客，具体参考[文档](https://nunocoracao.github.io/blowfish/docs/)
-
-
