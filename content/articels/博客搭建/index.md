@@ -4,6 +4,7 @@ showSummary: true
 summary: "简述一下博客搭建过程。<br/>框架使用的是用GO语言编写的Hugo，Hugo模板用的是blowfish。"
 layoutBackgroundBlur: true
 layoutBackgroundHeaderSpace: false
+date: 2022-12-09
 ---
 
 

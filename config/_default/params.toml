@@ -38,7 +38,7 @@ mainSections = ["articels", "recommend"]
   layoutBackgroundBlur = false # only used when layout equals background
 
 [article]
-  showDate = false
+  showDate = true
   showViews = true
   showLikes = true
   showDateUpdated = false
@@ -63,7 +63,7 @@ mainSections = ["articels", "recommend"]
   showComments = false
   sharingLinks = [ "email", "weibo", "reddit", "twitter"]
   layoutBackgroundBlur = true
-
+  layoutBackgroundHeaderSpace = false
 
 [list]
   showBreadcrumbs = false
@@ -75,6 +75,7 @@ mainSections = ["articels", "recommend"]
   cardViewScreenWidth = true
   showHero = true
   heroStyle = "background"
+  layoutBackgroundBlur = false
   layoutBackgroundHeaderSpace = true
 
 [sitemap]
