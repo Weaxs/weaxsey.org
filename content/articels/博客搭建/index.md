@@ -133,5 +133,13 @@ path = "github.com/nunocoracao/blowfish/v2"
 ### 自定义浏览器角标
 &emsp;&emsp;在[favicon.io](https://favicon.io/)讲自己的图片生成为各种尺寸的icon，直接解压在favicon.io下载好的icon压缩包，并放在/static目录下即可
 
+### 自定义ICON
+&emsp;&emsp;将自定义的svg文件放在/asserts/icons目录下，为了使ICON和主题自适应，需要在svg文件中添加属性 fill="currentColor" 如下：
+```svg
+<svg>
+    <<path fill="currentColor" d="xxx"/>
+</svg>
+```
+
 ### blowfish文档
 &emsp;&emsp;使用blowfish搭建博客，具体参考[文档](https://nunocoracao.github.io/blowfish/docs/)

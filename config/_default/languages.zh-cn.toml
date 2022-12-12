@@ -7,7 +7,7 @@ rtl = false
 
 title = "豆逗子的小黑屋"
 logo = "img/FF7cc.png"
-description = "My awesome website"
+description = "欢迎来到豆逗子的小黑屋"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 dateFormat = "2006-01-02"
@@ -15,7 +15,7 @@ dateFormat = "2006-01-02"
 [author]
   name = "Weaxs"
   image = "img/Satoru Gojo.jpeg"
-  headline = ""
+  headline = "welcome to Utopia"
   bio = ""
   links = [
     { email = "/links/email" },
