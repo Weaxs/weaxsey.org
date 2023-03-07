@@ -13,7 +13,7 @@ defaultBackgroundImage = "img/elden-ring-backgroud.png"
 enableSearch = true
 enableCodeCopy = true
 
-mainSections = ["articels", "recommend"]
+mainSections = ["articels", "recommend", "notes"]
 # robots = ""
 
 [header]
@@ -56,7 +56,7 @@ mainSections = ["articels", "recommend"]
   invertPagination = false
   showReadingTime = false
   showTableOfContents = true
-  showTaxonomies = false 
+  showTaxonomies = true
   showAuthorsBadges = false 
   showWordCount = false
   showSummary = true

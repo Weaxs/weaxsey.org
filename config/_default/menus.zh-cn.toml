@@ -22,6 +22,11 @@
   weight = 20
 
 [[main]]
+  name = "笔记"
+  pageRef = "notes"
+  weight = 30
+
+[[main]]
   pre = "github"
   url = "https://github.com/Weaxs"
   weight = 40
