@@ -72,3 +72,22 @@ layoutBackgroundHeaderSpace: false
 </table>
 
 ## 政治
+
+<table>
+    <thead>
+        <tr>
+            <th style="width: 25%">名称</th>
+            <th style="width: 15%">作者</th>
+            <th style="width: 15%">链接</th>
+            <th style="width: 15%">其他</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>如何学习重要政党会议</td>
+            <td>东吴证券</td>
+            <td><a href="polity/中国政策系列一：如何学习重要党政会议.pdf" target="_blank">书籍链接</a></td>
+            <td >2022 - Present</td>
+        </tr>
+    </tbody>
+</table>
