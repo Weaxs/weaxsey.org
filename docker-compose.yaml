@@ -1,6 +1,6 @@
 version: '3'
 services:
-  hugo_server:
+  hugo-server:
     image: klakegg/hugo:ext-alpine
     command: server
     volumes:

@@ -5,6 +5,7 @@ summary: "简述一下博客搭建过程。<br/>框架使用的是用GO语言编
 layoutBackgroundBlur: true
 layoutBackgroundHeaderSpace: false
 date: 2022-12-09
+tags: ["技术"]
 ---
 
 

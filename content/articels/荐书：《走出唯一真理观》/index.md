@@ -1,9 +1,9 @@
 ---
 title: "荐书：《走出唯一真理观》"
-showSummary: false
-summary: ""
+showSummary: true
+summary: "陈嘉映《走出唯一真理观》笔记"
 date: 2020-10-15
-
+tags: ["阅读","哲学"]
 ---
 
 

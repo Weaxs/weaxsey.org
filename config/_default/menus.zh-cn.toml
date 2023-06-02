@@ -37,19 +37,24 @@
 # the copyright notice. Configure as per the main menu above.
 
 [[footer]]
+  name = "标签"
+  pageRef = "tags"
+  weight = 10
+
+[[footer]]
   name = "机核网"
   url = "https://www.gcores.com/"
-  weight = 10
+  weight = 20
 
 [[footer]]
   name = "智堡"
   url = "https://wisburg.com/"
-  weight = 20
+  weight = 30
 
 [[footer]]
   name = "新经济思维研究所"
   url = "https://www.ineteconomics.org/"
-  weight = 30
+  weight = 40
 
 # [[footer]]
 #   name = "Tags"

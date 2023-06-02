@@ -1,8 +1,9 @@
 ---
 title: "Netty 源码分析及内存溢出思路"
-showSummary: false
-summary: ""
+showSummary: true
+summary: "主要介绍了Java NIO、Netty和Spring Reactor中Buffer的使用和继承关系。"
 date: 2023-02-06
+tags: ["技术"]
 ---
 
 通过一次内存溢出的事故，看了一下netty相关的源码，分享一下自己的收获。
