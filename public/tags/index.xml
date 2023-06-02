@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 豆逗子的小黑屋</title>
+    <link>https://weaxsey.org/tags/</link>
+    <description>Recent content in Tags on 豆逗子的小黑屋</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://weaxsey.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>经济</title>
+      <link>https://weaxsey.org/tags/%E7%BB%8F%E6%B5%8E/</link>
+      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://weaxsey.org/tags/%E7%BB%8F%E6%B5%8E/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>阅读</title>
+      <link>https://weaxsey.org/tags/%E9%98%85%E8%AF%BB/</link>
+      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://weaxsey.org/tags/%E9%98%85%E8%AF%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>技术</title>
+      <link>https://weaxsey.org/tags/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://weaxsey.org/tags/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>随笔</title>
+      <link>https://weaxsey.org/tags/%E9%9A%8F%E7%AC%94/</link>
+      <pubDate>Fri, 08 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://weaxsey.org/tags/%E9%9A%8F%E7%AC%94/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>哲学</title>
+      <link>https://weaxsey.org/tags/%E5%93%B2%E5%AD%A6/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://weaxsey.org/tags/%E5%93%B2%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
