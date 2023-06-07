@@ -27,9 +27,14 @@
   weight = 30
 
 [[main]]
+  name = "标签"
+  pageRef = "tags"
+  weight = 40
+
+[[main]]
   pre = "github"
   url = "https://github.com/Weaxs"
-  weight = 40
+  weight = 50
 
 
 # -- Footer Menu --

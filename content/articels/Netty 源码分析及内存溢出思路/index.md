@@ -3,7 +3,7 @@ title: "Netty 源码分析及内存溢出思路"
 showSummary: true
 summary: "主要介绍了Java NIO、Netty和Spring Reactor中Buffer的使用和继承关系。"
 date: 2023-02-06
-tags: ["技术"]
+tags: ["编程"]
 ---
 
 通过一次内存溢出的事故，看了一下netty相关的源码，分享一下自己的收获。
@@ -233,7 +233,7 @@ public class UnpooledHeapByteBuf extends AbstractReferenceCountedByteBuf
 
 **AbstractReferenceCountedByteBuf** ：
 1. 内部定义了一个ReferenceCountUpdater，用来做引用计数
-2. 实现了release方法，显式释放了updater引用技术的数量，然后调用子类 deallocate() 方法进行内存的释放
+2. 实现了release方法，显式释放了updater引用计数的数量，然后调用子类 deallocate() 方法进行内存的释放
 
 **PooledByteBuf** ：
 1. 定义了泛型T memory，用于存储byte[]或ByteBuffer

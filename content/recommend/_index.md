@@ -22,7 +22,7 @@ layoutBackgroundHeaderSpace: false
 ---
 
 
-## 经济金融
+## 经济
 
 <table>
     <thead>
@@ -69,6 +69,57 @@ layoutBackgroundHeaderSpace: false
         </tr>
     </tbody>
 
+</table>
+
+## 编程
+
+<table>
+    <thead>
+        <tr>
+            <th style="width: 20%">图片</th>
+            <th style="width: 25%">名称</th>
+            <th style="width: 15%">作者</th>
+            <th style="width: 15%">链接</th>
+            <th style="width: 15%">其他</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img src="coding/Data-Science-For-Beginners.png"/></td>
+            <td>给初学者看的数据科学教程 Data Science For Beginners</td>
+            <td>微软 microsoft</td>
+            <td><a href="https://microsoft.github.io/Data-Science-For-Beginners/#/" target="_blank">microsoft/Data-Science-For-Beginners</a></td>
+            <td >2023 - Present</td>
+        </tr>
+        <tr>
+            <td><img src="coding/ML-For-Beginners.png"/></td>
+            <td>给初学者看的机器学习教程 ML For Beginners</td>
+            <td>微软 microsoft</td>
+            <td><a href="https://microsoft.github.io/ML-For-Beginners/#/" target="_blank">microsoft/ML-For-Beginners</a></td>
+            <td >2023 - Present</td>
+        </tr>
+        <tr>
+            <td><img src="coding/AI-For-Beginners.png"/></td>
+            <td>给初学者看的人工智能教程 AI For Beginners</td>
+            <td>微软 microsoft</td>
+            <td><a href="https://microsoft.github.io/AI-For-Beginners/" target="_blank">microsoft/AI-For-Beginners</a></td>
+            <td >2023 - Present</td>
+        </tr>
+        <tr>
+            <td><img src="coding/IoT-For-Beginners.png"/></td>
+            <td>给初学者看的物联网教程 AI For Beginners</td>
+            <td>微软 microsoft</td>
+            <td><a href="https://microsoft.github.io/IoT-For-Beginners/" target="_blank">microsoft/IoT-For-Beginners</a></td>
+            <td >2023 - Present</td>
+        </tr>
+        <tr>
+            <td><img src="coding/icyfenix.png"/></td>
+            <td>凤凰架构——构建可靠的大型分布式系统</td>
+            <td>周志明</td>
+            <td><a href="https://icyfenix.cn/" target="_blank">凤凰架构电子书</a></td>
+            <td >2023 - Present</td>
+        </tr>
+    </tbody>
 </table>
 
 ## 政治

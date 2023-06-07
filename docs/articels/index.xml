@@ -6,7 +6,16 @@
     <description>Recent content in 文章 on 豆逗子的小黑屋</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 31 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://weaxsey.org/articels/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://weaxsey.org/articels/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go语言指针性能</title>
+      <link>https://weaxsey.org/articels/go%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88%E6%80%A7%E8%83%BD/</link>
+      <pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://weaxsey.org/articels/go%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88%E6%80%A7%E8%83%BD/</guid>
+      <description>Go值对象和指针对象</description>
+    </item>
+    
     <item>
       <title>从固定走向浮动 ——《时运变迁》读书笔记</title>
       <link>https://weaxsey.org/articels/%E4%BB%8E%E5%9B%BA%E5%AE%9A%E8%B5%B0%E5%90%91%E6%B5%AE%E5%8A%A8%E6%97%B6%E8%BF%90%E5%8F%98%E8%BF%81%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
