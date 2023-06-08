@@ -107,7 +107,7 @@ layoutBackgroundHeaderSpace: false
         </tr>
         <tr>
             <td><img src="coding/IoT-For-Beginners.png"/></td>
-            <td>给初学者看的物联网教程 AI For Beginners</td>
+            <td>给初学者看的物联网教程 IoT For Beginners</td>
             <td>微软 microsoft</td>
             <td><a href="https://microsoft.github.io/IoT-For-Beginners/" target="_blank">microsoft/IoT-For-Beginners</a></td>
             <td >2023 - Present</td>
@@ -119,6 +119,14 @@ layoutBackgroundHeaderSpace: false
             <td><a href="https://icyfenix.cn/" target="_blank">凤凰架构电子书</a></td>
             <td >2023 - Present</td>
         </tr>
+        <tr>
+            <td><img src="coding/从根儿上理解 MySQL.png"/></td>
+            <td>MySQL 是怎样运行的：从根儿上理解 MySQL</td>
+            <td>小孩子4919</td>
+            <td><a href="https://relph1119.github.io/mysql-learning-notes/#/" target="_blank">从根儿上理解MySQL电子书</a></td>
+            <td >2023 - Present</td>
+        </tr>
+
     </tbody>
 </table>
 
