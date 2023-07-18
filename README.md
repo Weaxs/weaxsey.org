@@ -21,3 +21,6 @@ https://github.com/klakegg/docker-hugo
 
 ### Blowfish - Theme
 https://github.com/nunocoracao/blowfish
+
+## Github Pages
+[Build And Depoly on Github Pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
