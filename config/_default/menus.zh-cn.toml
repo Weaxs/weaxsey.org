@@ -22,11 +22,6 @@
   weight = 20
 
 [[main]]
-  name = "笔记"
-  pageRef = "notes"
-  weight = 30
-
-[[main]]
   name = "标签"
   pageRef = "tags"
   weight = 40
