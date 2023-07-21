@@ -42,19 +42,25 @@
   weight = 10
 
 [[footer]]
-  name = "机核网"
-  url = "https://www.gcores.com/"
+  name = "推荐"
+  pageRef = "recommend"
   weight = 20
 
-[[footer]]
-  name = "智堡"
-  url = "https://wisburg.com/"
-  weight = 30
 
-[[footer]]
-  name = "新经济思维研究所"
-  url = "https://www.ineteconomics.org/"
-  weight = 40
+#[[footer]]
+#  name = "机核网"
+#  url = "https://www.gcores.com/"
+#  weight = 20
+#
+#[[footer]]
+#  name = "智堡"
+#  url = "https://wisburg.com/"
+#  weight = 30
+#
+#[[footer]]
+#  name = "新经济思维研究所"
+#  url = "https://www.ineteconomics.org/"
+#  weight = 40
 
 # [[footer]]
 #   name = "Tags"

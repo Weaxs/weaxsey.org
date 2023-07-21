@@ -7,20 +7,64 @@ showDate : false
 showDateUpdated : false
 showHeadingAnchors : false
 showPagination : false
-showReadingTime : false
+showReadingTime : true
 showTableOfContents : true
 showTaxonomies : false
-showWordCount : false
+showWordCount : true
 showSummary : false
 sharingLinks : false
 showEdit: false
-showViews: true
+showViews: false
 showLikes: false
 layoutBackgroundHeaderSpace: false
 
 
 ---
 
+## 网站 && 博客
+
+<table>
+    <thead>
+        <tr>
+            <th style="width: 25%">博客</th>
+            <th style="width: 15%">类别</th>
+            <th style="width: 15%">链接</th>
+            <th style="width: 15%">描述</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>达摩达兰博客</td>
+            <td>金融</td>
+            <td><a href="https://aswathdamodaran.blogspot.com/">aswath damodaran</a></td>
+            <td >-</td>
+        </tr>
+        <tr>
+            <td>智堡</td>
+            <td>宏观经济</td>
+            <td><a href="https://www.wisburg.com/">wisburg</a></td>
+            <td >-</td>
+        </tr>
+        <tr>
+            <td>新经济思维</td>
+            <td>宏观经济</td>
+            <td><a href="https://www.ineteconomics.org/">Institute for New Economic Thinking</a></td>
+            <td >-</td>
+        </tr>
+        <tr>
+            <td>机核网</td>
+            <td>游戏</td>
+            <td><a href="https://www.gcores.com/">gcores</a></td>
+            <td >-</td>
+        </tr>
+        <tr>
+            <td>鸟窝</td>
+            <td>技术</td>
+            <td><a href="https://colobu.com/">晁岳攀的博客</a></td>
+            <td >-</td>
+        </tr>
+    </tbody>
+</table>
 
 ## 经济
 
@@ -85,34 +129,6 @@ layoutBackgroundHeaderSpace: false
     </thead>
     <tbody>
         <tr>
-            <td><img src="coding/Data-Science-For-Beginners.png"/></td>
-            <td>给初学者看的数据科学教程 Data Science For Beginners</td>
-            <td>微软 microsoft</td>
-            <td><a href="https://microsoft.github.io/Data-Science-For-Beginners/#/" target="_blank">microsoft/Data-Science-For-Beginners</a></td>
-            <td >2023 - Present</td>
-        </tr>
-        <tr>
-            <td><img src="coding/ML-For-Beginners.png"/></td>
-            <td>给初学者看的机器学习教程 ML For Beginners</td>
-            <td>微软 microsoft</td>
-            <td><a href="https://microsoft.github.io/ML-For-Beginners/#/" target="_blank">microsoft/ML-For-Beginners</a></td>
-            <td >2023 - Present</td>
-        </tr>
-        <tr>
-            <td><img src="coding/AI-For-Beginners.png"/></td>
-            <td>给初学者看的人工智能教程 AI For Beginners</td>
-            <td>微软 microsoft</td>
-            <td><a href="https://microsoft.github.io/AI-For-Beginners/" target="_blank">microsoft/AI-For-Beginners</a></td>
-            <td >2023 - Present</td>
-        </tr>
-        <tr>
-            <td><img src="coding/IoT-For-Beginners.png"/></td>
-            <td>给初学者看的物联网教程 IoT For Beginners</td>
-            <td>微软 microsoft</td>
-            <td><a href="https://microsoft.github.io/IoT-For-Beginners/" target="_blank">microsoft/IoT-For-Beginners</a></td>
-            <td >2023 - Present</td>
-        </tr>
-        <tr>
             <td><img src="coding/icyfenix.png"/></td>
             <td>凤凰架构——构建可靠的大型分布式系统</td>
             <td>周志明</td>
@@ -126,7 +142,6 @@ layoutBackgroundHeaderSpace: false
             <td><a href="https://relph1119.github.io/mysql-learning-notes/#/" target="_blank">从根儿上理解MySQL电子书</a></td>
             <td >2023 - Present</td>
         </tr>
-
     </tbody>
 </table>
 
