@@ -26,15 +26,15 @@ layoutBackgroundHeaderSpace: false
 <table>
     <thead>
         <tr>
-            <th style="width: 25%">博客</th>
-            <th style="width: 15%">类别</th>
-            <th style="width: 15%">链接</th>
-            <th style="width: 15%">描述</th>
+            <th style="width: 20%">名称</th>
+            <th style="width: 10%">类别</th>
+            <th style="width: 30%">链接</th>
+            <th style="width: 10%">描述</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>达摩达兰博客</td>
+            <td>[博客] 达摩达兰</td>
             <td>金融</td>
             <td><a href="https://aswathdamodaran.blogspot.com/">aswath damodaran</a></td>
             <td >-</td>
@@ -58,9 +58,15 @@ layoutBackgroundHeaderSpace: false
             <td >-</td>
         </tr>
         <tr>
-            <td>鸟窝</td>
+            <td>[博客] 鸟窝</td>
             <td>技术</td>
             <td><a href="https://colobu.com/">晁岳攀的博客</a></td>
+            <td >-</td>
+        </tr>
+        <tr>
+            <td>[博客] 厄休拉勒古恩</td>
+            <td>文学</td>
+            <td><a href="https://www.ursulakleguin.com/home/">ursulak leguin</a></td>
             <td >-</td>
         </tr>
     </tbody>
