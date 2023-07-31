@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+interface ByteBufAllocator {
+    + ByteBuf buffer()
+    + ByteBuf ioBuffer()
+    + ByteBuf heapBuffer()
+    + ByteBuf directBuffer()
+}
+
+interface ByteBufAllocatorMetricProvider {
+    + ByteBufAllocatorMetric metric()
+}
+
+abstract AbstractByteBufAllocator implements ByteBufAllocator {
+    - bool directByDefault
+    + {abstract} ByteBuf newHeapBuffer()
+    + {abstract} ByteBuf newDirectBuffer()
+}
+
+class PooledByteBufAllocator extends AbstractByteBufAllocator implements ByteBufAllocatorMetricProvider {
+    __ PoolArena __
+    -PoolArena<byte[]>[] heapArenas
+    -PoolArena<ByteBuffer>[] directArenas
+    __ Metrics __
+    -PoolArenaMetric heapArenaMetrics
+    -PoolArenaMetric directArenaMetrics PoolArenaMetric
+}
+
+class UnPooledByteBufAllocator extends AbstractByteBufAllocator implements ByteBufAllocatorMetricProvider {
+    __ heap __
+    -{static} class InstrumentedUnpooledUnsafeHeapByteBuf
+    -{static} class InstrumentedUnpooledHeapByteBuf
+    __ direct __
+    -{static} class InstrumentedUnpooledDirectByteBuf
+    -{static} class InstrumentedUnpooledUnsafeDirectByteBuf
+    -{static} class InstrumentedUnpooledUnsafeNoCleanerDirectByteBuf
+    __ Metrics __
+    -{static} class UnpooledByteBufAllocatorMetric
+}
+
+@enduml

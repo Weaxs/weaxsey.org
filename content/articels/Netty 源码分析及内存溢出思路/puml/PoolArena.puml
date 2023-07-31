@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class PoolArena<T> {
+    ~ PooledByteBuf<T> allocate()
+    ~ void reallocate()
+    ~ void free()
+
+    + {abstract} PoolChunk<T> newChunk()
+    + {abstract} PoolChunk<T> newUnpooledChunk()
+    + {abstract} void memoryCopy()
+    + {abstract} void destroyChunk()
+    + {abstract} PooledByteBuf<T> newByteBuf()
+}
+
+static class DirectArena <ByteBuffer> extends PoolArena  {
+    PooledDirectByteBuf
+    PooledUnsafeDirectByteBuf
+}
+
+static class HeapArena <byte[]> extends PoolArena {
+    PooledHeapByteBuf
+    PooledUnsafeHeapByteBuf
+}
+
+@enduml

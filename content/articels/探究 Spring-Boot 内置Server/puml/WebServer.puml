@@ -1,0 +1,48 @@
+@startuml
+
+
+interface WebServer {
+  + void start()
+  + void stop()
+  + int getPort()
+  + void shutDownGracefully(GracefulShutdownCallback callback)
+  + void destroy()
+}
+class JettyWebServer implements WebServer
+class NettyWebServer implements WebServer
+class TomcatWebServer implements WebServer
+class UndertowWebServer implements WebServer
+class UndertowServletWebServer extends UndertowWebServer
+
+note bottom of JettyWebServer
+  依赖于 spring-boot-starter-jetty
+end note
+
+note bottom of NettyWebServer
+  依赖于 spring-boot-starter-reactor-netty
+  注：spring-boot-starter-webflux依赖了此包
+  即spring-boot-webflux默认使用 netty
+end note
+
+note bottom of TomcatWebServer
+  依赖于 spring-boot-starter-tomcat
+  注：spring-boot-starter-web依赖了此包
+  即spring-boot-web默认使用 tomcat server
+end note
+
+note "依赖于 spring-boot-starter-undertow 包" as undertow
+
+UndertowWebServer .. undertow
+UndertowServletWebServer .. undertow
+
+
+
+
+hide member
+
+show WebServer methods
+
+
+
+
+@enduml

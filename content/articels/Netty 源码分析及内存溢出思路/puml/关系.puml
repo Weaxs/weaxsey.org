@@ -1,0 +1,45 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+package spring <<Rectangle>>{
+interface DataBuffer
+interface PooledDataBuffer extends DataBuffer
+
+class NettyDataBuffer implements PooledDataBuffer {
+    - ByteBuf byteBuf
+}
+
+class DefaultDataBuffer implements DataBuffer {
+    - ByteBuffer byteBuffer
+}
+}
+
+package netty <<Rectangle>>{
+    abstract ByteBuf
+    abstract PooledByteBuf <T> extends ByteBuf {
+        # protected T memory;
+    }
+    abstract UnpooledHeapByteBuf extends ByteBuf {
+        ~byte[] array
+    }
+    class UnpooledDirectByteBuf extends ByteBuf {
+        ~ByteBuffer buffer;
+    }
+}
+
+package nio <<Rectangle>>{
+    abstract class ByteBuffer
+    class DirectByteBuffer extends ByteBuffer
+    class HeapByteBuffer extends ByteBuffer
+}
+
+
+
+UnpooledDirectByteBuf *- ByteBuffer
+PooledByteBuf *- ByteBuffer
+DefaultDataBuffer *- ByteBuffer
+NettyDataBuffer *- ByteBuf
+
+
+
+@enduml

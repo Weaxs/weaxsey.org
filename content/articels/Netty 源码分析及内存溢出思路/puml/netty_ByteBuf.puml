@@ -1,0 +1,165 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+interface ReferenceCounted {
+    + int refCnt()
+    + boolean release()
+}
+abstract ByteBuf implements ReferenceCounted {
++ {abstract} boolean isDirect()
+    + {abstract} int refCnt()
+    + {abstract} Type get()
+    + {abstract} ByteBuf set()
+    + {abstract} Type read()
+    + {abstract} ByteBuf write()
+    + {abstract} ByteBuf capacity()
+}
+abstract AbstractByteBuf extends ByteBuf {
+    + {abstract} Type _get()
+    + {abstract} void _set()
+    .. override ..
+    + Type get()
+    + ByteBuf set()
+    + Type read()
+    + ByteBuf write()
+}
+
+note left of AbstractByteBuf
+  1. 实现了ByteBuf的所有方法get/set/read/write方法
+  2. get/read方法调用_get，set/write调用_set
+end note
+
+abstract AbstractReferenceCountedByteBuf extends AbstractByteBuf {
+    - {static} ReferenceCountUpdater<AbstractReferenceCountedByteBuf> updater
+    - boolean handleRelease(boolean result)
+    + {abstract} void deallocate()
+    .. override ..
+    + boolean release()
+}
+
+note left of AbstractReferenceCountedByteBuf
+  1. updater来做引用计数
+  2. 实现release方法，先对updater对象release，然后调用deallocate()
+end note
+
+abstract PooledByteBuf <T> extends AbstractReferenceCountedByteBuf {
+    # PoolChunk<T> chunk
+    # protected T memory;
+    - ByteBufAllocator allocator
+    - Handle<PooledByteBuf<T>> recyclerHandle;
+    --
+    ~ void init()
+    ~ void initUnpooled()
+    .. override ..
+    + void deallocate()
+    + ByteBuf capacity()
+}
+
+package PooledByteBufAllocator中使用的ByteBuf <<Rectangle>> {
+  class PooledDirectByteBuf <ByteBuffer> extends PooledByteBuf {
+    - {static} ObjectPool<PooledUnsafeDirectByteBuf> RECYCLE
+    --
+    ~ {static} PooledDirectByteBuf newInstance()
+    .. override ..
+    + Type _get()
+    + void _set()
+  }
+  class PooledHeapByteBuf <byte[]> extends PooledByteBuf {
+    - {static} ObjectPool<PooledHeapByteBuf> RECYCLE
+    --
+    ~ {static} PooledHeapByteBuf newInstance
+    .. override ..
+    + Type _get()
+    + void _set()
+  }
+  class PooledUnsafeDirectByteBuf <ByteBuffer> extends PooledByteBuf {
+    - {static} ObjectPool<PooledUnsafeDirectByteBuf> RECYCLER
+    --
+    ~ {static} PooledUnsafeDirectByteBuf newInstance
+    .. override ..
+    + Type _get()
+    + void _set()
+    ~ void init()
+    ~ void initUnpooled()
+  }
+  class PooledUnsafeHeapByteBuf <byte[]> extends PooledByteBuf {
+    - {static} ObjectPool<PooledUnsafeHeapByteBuf> RECYCLER
+    --
+    ~ {static} PooledUnsafeHeapByteBuf newInstance
+    .. override ..
+    + Type _get()
+    + void _set()
+  }
+}
+
+class UnpooledDirectByteBuf  extends AbstractReferenceCountedByteBuf {
+    - ByteBufAllocator alloc
+    ~ ByteBuffer buffer
+    --
+    # ByteBuffer allocateDirect()
+    # void freeDirect()
+    .. override ..
+    + Type _get()
+    + void _set()
+    + void deallocate()
+}
+class UnpooledHeapByteBuf  extends AbstractReferenceCountedByteBuf {
+    - ByteBufAllocator alloc
+    ~ byte[] array
+    --
+    + Type _get()
+    + void _set()
+    + void deallocate()
+    # byte[] allocateArray()
+    # void freeArray()
+}
+class UnpooledUnsafeDirectByteBuf  extends UnpooledDirectByteBuf {
+    .. override ..
+    + Type _get()
+    + void _set()
+}
+class UnpooledUnsafeHeapByteBuf extends UnpooledHeapByteBuf {
+    .. override ..
+    # byte[] allocateArray()
+    + Type _get()
+    + void _set()
+}
+class UnpooledUnsafeNoCleanerDirectByteBuf extends UnpooledUnsafeDirectByteBuf {
+    ~ ByteBuffer reallocateDirect
+    .. override ..
+    + ByteBuf capacity
+}
+
+
+package UnpooledByteBufAllocator中使用的ByteBuf <<Rectangle>> {
+  class InstrumentedUnpooledUnsafeHeapByteBuf extends UnpooledUnsafeHeapByteBuf {
+    .. override ..
+    # byte[] allocateArray()
+    # void freeArray()
+  }
+  class InstrumentedUnpooledUnsafeNoCleanerDirectByteBuf extends UnpooledUnsafeNoCleanerDirectByteBuf {
+    .. override ..
+    # ByteBuffer allocateDirect()
+    # void freeDirect()
+    ~ ByteBuffer reallocateDirect
+  }
+  class InstrumentedUnpooledHeapByteBuf extends UnpooledHeapByteBuf {
+    .. override ..
+    # byte[] allocateArray()
+    # void freeArray()
+  }
+  class InstrumentedUnpooledUnsafeDirectByteBuf extends UnpooledUnsafeDirectByteBuf {
+     .. override ..
+     # ByteBuffer allocateDirect()
+     # void freeDirect()
+  }
+  class InstrumentedUnpooledDirectByteBuf extends UnpooledDirectByteBuf {
+    .. override ..
+    # ByteBuffer allocateDirect()
+    # void freeDirect()
+  }
+}
+
+
+@enduml

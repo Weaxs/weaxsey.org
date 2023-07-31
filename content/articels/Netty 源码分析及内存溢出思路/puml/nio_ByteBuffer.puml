@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Buffer {
+    ~ {static} Unsafe UNSAFE
+
+}
+
+abstract class ByteBuffer extends Buffer {
+    ~ byte[] hb (nly for heap buffers)
+    --
+    + {abstract} Type put()
+    + {abstract} Type get()
+}
+
+abstract class MappedByteBuffer extends ByteBuffer {
+    - FileDescriptor fd
+}
+
+class HeapByteBuffer extends ByteBuffer {
+    - {static} long ARRAY_BASE_OFFSET
+    - {static} long ARRAY_INDEX_SCALE
+    .. override ..
+    + Type put()
+    + Type get()
+}
+
+interface DirectBuffer {
+    + Cleaner cleaner()
+}
+class DirectByteBuffer extends MappedByteBuffer implements DirectBuffer {
+    - Cleaner cleaner
+    - {static} class Deallocator
+    .. override ..
+    + Type put()
+    + Type get()
+    + Cleaner cleaner()
+}
+
+@enduml

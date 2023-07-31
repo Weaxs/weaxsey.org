@@ -1,0 +1,64 @@
+@startuml
+
+set namespaceSeparator none
+
+interface ConfigurableWebServerApplicationContext extends ApplicationContext, Lifecycle, Closeable
+'interface AnnotationConfigRegistry
+class GenericApplicationContext implements BeanDefinitionRegistry
+
+package <size:25>servlet <<Rectangle>> {
+  interface ServletWebServerFactory {
+    + WebServer getWebServer(ServletContextInitializer... initializers)
+   }
+   class ServletWebServerApplicationContext extends GenericWebApplicationContext  {
+     - WebServer webServer
+     - ServletConfig servletConfig
+     # void onRefresh()
+   }
+'   class AnnotationConfigServletWebServerApplicationContext implements AnnotationConfigRegistry
+
+}
+package <size:25>reactive <<Rectangle>> {
+  interface ReactiveWebServerFactory {
+      + WebServer getWebServer(HttpHandler handler)
+   }
+
+  class WebServerManager {
+      - WebServer webServer
+      + WebServerManager(applicationContext, factory, handlerSupplier, lazyInit)
+
+  }
+'  class AnnotationConfigReactiveWebServerApplicationContext implements AnnotationConfigRegistry
+  class ReactiveWebServerApplicationContext extends GenericReactiveWebApplicationContext {
+    - WebServerManager serverManager
+    # void onRefresh()
+  }
+}
+
+
+
+
+
+
+
+hide member
+show ServletWebServerFactory methods
+show ReactiveWebServerFactory methods
+show ServletWebServerApplicationContext member
+show ReactiveWebServerApplicationContext member
+show WebServerManager member
+
+'AnnotationConfigServletWebServerApplicationContext -right-|> ServletWebServerApplicationContext
+'AnnotationConfigReactiveWebServerApplicationContext -right-|> ReactiveWebServerApplicationContext
+GenericWebApplicationContext -up-|> GenericApplicationContext
+GenericReactiveWebApplicationContext -up-|> GenericApplicationContext
+
+ServletWebServerApplicationContext ..|> ConfigurableWebServerApplicationContext
+ReactiveWebServerApplicationContext ..|> ConfigurableWebServerApplicationContext
+
+
+ServletWebServerApplicationContext::onRefresh --> ServletWebServerFactory::getWebServer
+WebServerManager::WebServerManager --> ReactiveWebServerFactory::getWebServer
+ReactiveWebServerApplicationContext::onRefresh --> WebServerManager::WebServerManager
+
+@enduml

@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+interface DataBuffer {
+    + int/DataBuffer capacity()
+    + int/DataBuffer read()
+    + DataBuffer write()
+    + ByteBuffer asByteBuffer()
+    + InputStream asInputStream()
+    + OutputStream asOutputStream()
+}
+
+interface PooledDataBuffer extends DataBuffer {
+    + boolean isAllocated()
+    + PooledDataBuffer retain()
+    + PooledDataBuffer touch()
+    + boolean release()
+}
+
+class DefaultDataBuffer implements DataBuffer {
+    - DefaultDataBufferFactory dataBufferFactor
+    - ByteBuffer byteBuffer
+    - class DefaultDataBufferInputStream
+    - class DefaultDataBufferOutputStream
+    .. override ..
+    + int/DataBuffer capacity()
+    + int/DataBuffer read()
+    + DataBuffer write()
+    + ByteBuffer asByteBuffer()
+    + InputStream asInputStream()
+    + OutputStream asOutputStream()
+}
+
+class NettyDataBuffer implements PooledDataBuffer {
+    - ByteBuf byteBuf
+    - NettyDataBufferFactory dataBufferFactory
+    --
+    + ByteBuf getNativeBuffer()
+    .. override ..
+    + int/DataBuffer capacity()
+    + int/DataBuffer read()
+    + DataBuffer write()
+    + ByteBuffer asByteBuffer()
+    + InputStream asInputStream()
+    + OutputStream asOutputStream()
+    + boolean release()
+}
+
+@enduml

@@ -1,0 +1,88 @@
+@startuml
+
+set namespaceSeparator none
+interface WebServerFactory {
+}
+
+interface ErrorPageRegistry {
+   void getWebServer
+}
+
+
+interface ConfigurableWebServerFactory
+  abstract class AbstractConfigurableWebServerFactory implements ConfigurableWebServerFactory
+
+  ConfigurableWebServerFactory -up-|> WebServerFactory
+  ConfigurableWebServerFactory -up-|> ErrorPageRegistry
+
+package <size:25>servlet <<Rectangle>> {
+  note "<size:20>spring-boot-starter-web</size>" as web
+
+   interface WebListenerRegistry
+   interface ServletWebServerFactory {
+    + WebServer getWebServer(ServletContextInitializer... initializers)
+   }
+   interface ConfigurableServletWebServerFactory extends ServletWebServerFactory, WebListenerRegistry
+   abstract class AbstractServletWebServerFactory implements ConfigurableServletWebServerFactory
+   class JettyServletWebServerFactory extends AbstractServletWebServerFactory {
+    - JettyWebServer
+   }
+   class TomcatServletWebServerFactory extends AbstractServletWebServerFactory {
+    - TomcatWebServer
+   }
+   class UndertowServletWebServerFactory extends AbstractServletWebServerFactory {
+    - UndertowServletWebServer
+   }
+
+  ConfigurableServletWebServerFactory -up-|> ConfigurableWebServerFactory
+  AbstractServletWebServerFactory -up-|> AbstractConfigurableWebServerFactory
+
+}
+
+package <size:25>reactive <<Rectangle>> {
+  note "<size:20>spring-boot-starter-webflux</size>" as webflux
+
+  interface ReactiveWebServerFactory {
+    + WebServer getWebServer(HttpHandler handler)
+  }
+  interface ConfigurableReactiveWebServerFactory extends ReactiveWebServerFactory
+  abstract class AbstractReactiveWebServerFactory implements ConfigurableReactiveWebServerFactory
+  class JettyReactiveWebServerFactory extends AbstractReactiveWebServerFactory {
+    - JettyWebServer
+   }
+  class NettyReactiveWebServerFactory extends AbstractReactiveWebServerFactory {
+    - NettyWebServer
+  }
+  class TomcatReactiveWebServerFactory extends AbstractReactiveWebServerFactory {
+    - TomcatWebServer
+  }
+  class UndertowReactiveWebServerFactory extends AbstractReactiveWebServerFactory {
+    - UndertowWebServer
+  }
+
+  ConfigurableReactiveWebServerFactory -up-|> ConfigurableWebServerFactory
+  AbstractReactiveWebServerFactory -up-|> AbstractConfigurableWebServerFactory
+
+}
+
+
+
+
+hide member
+show JettyServletWebServerFactory fields
+show TomcatServletWebServerFactory fields
+show UndertowServletWebServerFactory fields
+show JettyReactiveWebServerFactory fields
+show NettyReactiveWebServerFactory fields
+show TomcatReactiveWebServerFactory fields
+show UndertowReactiveWebServerFactory fields
+show ServletWebServerFactory methods
+show ReactiveWebServerFactory methods
+
+
+
+
+
+
+
+@enduml
