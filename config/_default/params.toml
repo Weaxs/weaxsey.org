@@ -94,8 +94,8 @@ mainSections = ["articels", "recommend", "notes"]
   # measurementId = "XXXXXX"
 
 [fathomAnalytics]
-  # site = "ABC12345"
-  # domain = "llama.yoursite.com"
+  site = "97ebe2d2-488d-46c3-b90c-503283d35d0b"
+  domain = "umami.weaxsey.org"
 
 [verification]
   # google = ""
