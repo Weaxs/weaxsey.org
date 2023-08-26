@@ -104,5 +104,4 @@ mainSections = ["articels", "recommend", "notes"]
   # yandex = ""
 
 [umamiAnalytics]
-  websiteid = "97ebe2d2-488d-46c3-b90c-503283d35d0b"
-  domain = "umami.weaxsey.org"
+  websiteid = "a9ea899a-94a5-4ae3-bd90-43f9128e7b03"
