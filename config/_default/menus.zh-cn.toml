@@ -45,7 +45,11 @@
   name = "推荐"
   pageRef = "recommend"
   weight = 20
-
+  
+[[footer]]
+  name = "统计"
+  url = "https://umami.weaxsey.org/share/TlE0KGIzaUDFmjbO/weaxsey.org"
+  weight = 30
 
 #[[footer]]
 #  name = "机核网"
