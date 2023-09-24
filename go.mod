@@ -3,5 +3,5 @@ module github.com/Weaxs/blog-blowfish
 go 1.20
 
 require (
-	github.com/nunocoracao/blowfish/v2 v2.40.1 // indirect
+	github.com/nunocoracao/blowfish/v2 v2.41.0 // indirect
 )
