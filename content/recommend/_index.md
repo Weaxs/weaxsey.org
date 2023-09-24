@@ -64,6 +64,12 @@ layoutBackgroundHeaderSpace: false
             <td >-</td>
         </tr>
         <tr>
+            <td>[博客] Java 全栈体系支持 </td>
+            <td>技术</td>
+            <td><a href="https://pdai.tech/">pdai的博客</a></td>
+            <td >-</td>
+        </tr>
+        <tr>
             <td>[博客] 厄休拉勒古恩</td>
             <td>文学</td>
             <td><a href="https://www.ursulakleguin.com/home/">ursulak leguin</a></td>
@@ -152,6 +158,13 @@ layoutBackgroundHeaderSpace: false
             <td>MySQL 是怎样运行的：从根儿上理解 MySQL</td>
             <td>小孩子4919</td>
             <td><a href="https://relph1119.github.io/mysql-learning-notes/#/" target="_blank">从根儿上理解MySQL电子书</a></td>
+            <td >2023 - Present</td>
+        </tr>
+        <tr>
+            <td><img src="coding/大规模语言模型：从理论到实践.png"/></td>
+            <td>大规模语言模型：从理论到实践</td>
+            <td>张奇 桂韬 郑锐 ⻩萱菁</td>
+            <td><a href="https://intro-llm.github.io/" target="_blank">大规模语言模型：从理论到实践电子书</a></td>
             <td >2023 - Present</td>
         </tr>
     </tbody>
