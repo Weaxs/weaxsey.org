@@ -104,7 +104,7 @@ layoutBackgroundHeaderSpace: false
             <td>
                 <a href="https://www.coursera.org/learn/money-banking" target="_blank">coursera</a>
                 <br/>  
-                <a href="https://wisburg.com/videos?page=1&k=&tagid=79" target="_blank">智堡</a>
+                <a href="https://www.wisburg.com/topics/79" target="_blank">智堡</a>
             </td>
             <td >2022 - Present</td>
         </tr>
