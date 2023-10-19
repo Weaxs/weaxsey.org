@@ -129,6 +129,13 @@ layoutBackgroundHeaderSpace: false
              <td><a href="economy/聪明投资者的成功之道——好生意、好公司、好价格.pdf" target="_blank">书籍链接</a></td>
              <td >2022 - Present</td>
         </tr>
+        <tr>
+            <td>-</td>
+            <td>金融的困惑——基于反身性、博弈论与肥尾统计的个人研究</td>
+            <td>徐鸿鹄</td>
+            <td><a href="https://github.com/lostinet/Finance-at-a-loss" target="_blank">github pdf</a></td>
+            <td >2023 - Present</td>
+        </tr>
     </tbody>
 
 </table>
@@ -165,6 +172,13 @@ layoutBackgroundHeaderSpace: false
             <td>大规模语言模型：从理论到实践</td>
             <td>张奇 桂韬 郑锐 ⻩萱菁</td>
             <td><a href="https://intro-llm.github.io/" target="_blank">大规模语言模型：从理论到实践电子书</a></td>
+            <td >2023 - Present</td>
+        </tr>
+        <tr>
+            <td><img src="https://github.com/ByteByteGoHq/system-design-101/raw/main/images/banner.jpg"/></td>
+            <td>system design 101</td>
+            <td>ByteByteGoHq</td>
+            <td><a href="https://github.com/ByteByteGoHq/system-design-101" target="_blank">github 电子书</a></td>
             <td >2023 - Present</td>
         </tr>
     </tbody>
