@@ -21,6 +21,4 @@ dateFormat = "2006-01-02"
     { email = "/links/email" },
     { github = "https://github.com/Weaxs" },
     { steam = "https://steamcommunity.com/id/weaxs" },
-    { weibo = "https://weibo.com/u/5462117754" },
-    { nintendo-switch = "/links/nintendo-switch" },
   ]
