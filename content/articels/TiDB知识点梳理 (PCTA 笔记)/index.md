@@ -1,5 +1,5 @@
 ---
-title: "TiDB知识点梳理——PCTA笔记"
+title: "TiDB知识点梳理 (PCTA 笔记)"
 showSummary: true
 summary: "之前对看了TiDB 数据库核心原理与架构(101)，但笔记比较潦草，索性写个完整笔记，顺便追源码"
 date: 2023-11-30
