@@ -5,7 +5,7 @@ summary: "kNN/ANN近邻算法梳理，简单介绍了基于KD-tree/IVF/HNSW/LSH�
 layoutBackgroundBlur: true
 layoutBackgroundHeaderSpace: false
 date: 2023-10-30
-tags: ["编程"]
+tags: ["算法原理"]
 ---
 
 {{< katex >}}

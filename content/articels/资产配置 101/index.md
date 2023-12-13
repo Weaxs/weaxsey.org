@@ -3,7 +3,7 @@ title: "资产配置 101"
 showSummary: true
 summary: "介绍长短期资产配置的原理和方法，和一些知名投资策略的机构"
 date: 2023-08-15
-tags: ["经济"]
+tags: ["金融理财"]
 ---
 
 {{< katex >}}

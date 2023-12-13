@@ -3,7 +3,7 @@ title: "为什么Spring可以“自己注入自己”"
 showSummary: true
 summary: "看一下Spring源码和PR记录，解答从哪个版本哪个提交那段代码后，Spring支持了Self-Injection"
 date: 2023-06-21
-tags: ["编程"]
+tags: ["编程框架"]
 ---
 
 

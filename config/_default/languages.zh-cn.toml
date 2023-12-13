@@ -15,7 +15,7 @@ dateFormat = "2006-01-02"
 [author]
   name = "Weaxs"
   image = "img/Satoru Gojo.jpeg"
-  headline = "welcome to Utopia"
+  headline = ""
   bio = ""
   links = [
     { email = "/links/email" },

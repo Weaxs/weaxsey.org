@@ -3,7 +3,7 @@ title: "Java & Go 线程模式对比"
 showSummary: true
 summary: "本文旨在从源码角度阐述 Java 和 Go 中对线程/协程的管理、调度，ForkJoin模型等"
 date: 2023-09-29
-tags: ["编程"]
+tags: ["编程框架"]
 ---
 
 ## 引言

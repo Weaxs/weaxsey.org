@@ -5,7 +5,7 @@ summary: "《大规模语言模型：从理论到实践》的阅读笔记，简�
 layoutBackgroundBlur: true
 layoutBackgroundHeaderSpace: false
 date: 2023-12-10
-tags: ["编程", "阅读"]
+tags: ["算法原理", "阅读笔记"]
 ---
 
 {{< katex >}}

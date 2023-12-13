@@ -3,7 +3,7 @@ title: "Hugo + umami 博客统计面板"
 showSummary: true
 summary: "使用 umami 为 Hugo 博客添加统计面板"
 date: 2023-08-25
-tags: ["编程"]
+tags: ["编程框架"]
 ---
 
 

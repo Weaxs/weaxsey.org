@@ -3,7 +3,7 @@ title: "搭建Go版本Kubernetes微服务示例"
 showSummary: true
 summary: "使用go语言基于Kubernetes搭建微服务，业务需求参考《凤凰架构》Kubernetes微服务"
 date: 2023-07-20
-tags: ["编程"]
+tags: ["编程框架"]
 ---
 
 ## 前言
