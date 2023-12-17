@@ -176,9 +176,15 @@ $$
 - SwiGLU 激活函数：在全连接层使用 SwiGLU激活函数替换ReLU函数，相较于 ReLU 函数在大部分评测中都有不少提升。在LLaMA中全连接层使用带有 SwiGLU 激活函数的FFN (Position-wise Feed-Forward Network) 的计算公式如下，其中 \\(\sigma(x)\\) 是 \\(Sigmoid\\) 函数：
     
     $$
-    FNN_{SwiGLU}(x, W, V, W_2) = SwiGLU(x, W,V)W_2\\ SwiGLU(x,W,V)=Swish_{\beta}(xW) \otimes xV \\ Switsh_\beta(x)=x\sigma (\beta x)
+    FNN_{SwiGLU}(x, W, V, W_2) = SwiGLU(x, W,V)W_2
     $$
-    
+    $$
+    SwiGLU(x,W,V)=Swish_{\beta}(xW) \otimes xV
+    $$
+    $$
+    Switsh_\beta(x)=x\sigma (\beta x)
+    $$
+
     - 当 \\(\beta\\) 趋近于 \\(0\\) 时，\\(Swish\\) 函数趋近于线性函数 \\(y =x\\)
     - 当 \\(\beta\\) 趋近于 \\(1\\) 时，\\(Swish\\) 函数是光滑且非单调的
     - 当 \\(\beta\\) 趋近于\\(+\infty\\)时，\\(Swish\\) 函数趋近于 \\(ReLU\\) 函数
