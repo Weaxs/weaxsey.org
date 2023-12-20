@@ -392,13 +392,13 @@ $$
 - 如果只根据当前状态\\(s\\) 决定，用 \\(V_\pi(s)\\) 来表示
 
 $$
-V_\pi(s) = \mathbb{E}_\pi\lbrack\sum^\infty_{k=1} \gamma^kr_{t+k+1}|s_t=s\rbrack
+V_\pi(s) = \mathbb{E}\_\pi\lbrack\sum^\infty_{k=1} \gamma^kr_{t+k+1}|s_t=s\rbrack
 $$
 
 - 如果根据当前状态\\(s\\)和动作\\(a\\)，用 \\(Q_\pi(s,a)\\) 来表示
 
 $$
-Q_\pi(s,a)=\mathbb{E}_\pi\lbrack\sum^\infty_{k=0}\gamma^kr_{t+k+1}|s_t=s,a_t=a\rbrack
+Q_\pi(s,a)=\mathbb{E}_\pi\lbrack\sum^\infty\_{k=0}\gamma^kr\_{t+k+1}|s_t=s,a_t=a\rbrack
 $$
 
 根据智能体Agent所学习的组件不同，可以归类为：
