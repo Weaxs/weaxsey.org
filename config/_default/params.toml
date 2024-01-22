@@ -105,4 +105,4 @@ mainSections = ["articels", "recommend", "notes"]
 
 [umamiAnalytics]
   websiteid = "7bf15f5e-1928-4ef3-935a-e72e00d871f8"
-  domain = "umami-umami.koyeb.app"
+  domain = "umami.weaxsey.org"
