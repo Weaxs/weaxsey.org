@@ -16,12 +16,11 @@ sharingLinks : false
 showEdit: false
 showViews: false
 showLikes: false
+layoutBackgroundBlur: false
 layoutBackgroundHeaderSpace: false
-
-
 ---
 
-## 网站 && 博客
+## 博客
 
 <table>
     <thead>
@@ -29,57 +28,67 @@ layoutBackgroundHeaderSpace: false
             <th style="width: 20%">名称</th>
             <th style="width: 10%">类别</th>
             <th style="width: 30%">链接</th>
-            <th style="width: 10%">描述</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>[博客] 达摩达兰</td>
+            <td>达摩达兰</td>
             <td>金融</td>
             <td><a href="https://aswathdamodaran.blogspot.com/">aswath damodaran</a></td>
-            <td >-</td>
         </tr>
+        <tr>
+            <td>鸟窝</td>
+            <td>技术</td>
+            <td><a href="https://colobu.com/">晁岳攀的博客</a></td>
+        </tr>
+        <tr>
+            <td>Java 全栈体系支持 </td>
+            <td>技术</td>
+            <td><a href="https://pdai.tech/">pdai的博客</a></td>
+        </tr>
+        <tr>
+            <td>厄休拉勒古恩</td>
+            <td>文学</td>
+            <td><a href="https://www.ursulakleguin.com/home/">ursulak leguin</a></td>
+        </tr>
+        <tr>
+            <td>云原生博客</td>
+            <td>技术</td>
+            <td><a href="https://jimmysong.io/"> Jimmy Song</a></td>
+        </tr>
+    </tbody>
+</table>
+
+## 站点
+
+<table>
+    <thead>
+        <tr>
+            <th style="width: 20%">名称</th>
+            <th style="width: 10%">类别</th>
+            <th style="width: 30%">链接</th>
+        </tr>
+    </thead>
+    <tbody>
         <tr>
             <td>智堡</td>
             <td>宏观经济</td>
             <td><a href="https://www.wisburg.com/">wisburg</a></td>
-            <td >-</td>
         </tr>
         <tr>
             <td>新经济思维</td>
             <td>宏观经济</td>
             <td><a href="https://www.ineteconomics.org/">Institute for New Economic Thinking</a></td>
-            <td >-</td>
         </tr>
         <tr>
             <td>机核网</td>
             <td>游戏</td>
             <td><a href="https://www.gcores.com/">gcores</a></td>
-            <td >-</td>
-        </tr>
-        <tr>
-            <td>[博客] 鸟窝</td>
-            <td>技术</td>
-            <td><a href="https://colobu.com/">晁岳攀的博客</a></td>
-            <td >-</td>
-        </tr>
-        <tr>
-            <td>[博客] Java 全栈体系支持 </td>
-            <td>技术</td>
-            <td><a href="https://pdai.tech/">pdai的博客</a></td>
-            <td >-</td>
-        </tr>
-        <tr>
-            <td>[博客] 厄休拉勒古恩</td>
-            <td>文学</td>
-            <td><a href="https://www.ursulakleguin.com/home/">ursulak leguin</a></td>
-            <td >-</td>
         </tr>
         <tr>
             <td>夜空中国</td>
             <td>摄影</td>
             <td><a href="https://nightchina.net/">night china</a></td>
-            <td >-</td>
         </tr>
     </tbody>
 </table>
@@ -204,3 +213,5 @@ layoutBackgroundHeaderSpace: false
         </tr>
     </tbody>
 </table>
+
+

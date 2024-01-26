@@ -5,7 +5,7 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://nunocoracao.github.io/blowfish/docs/configuration/#theme-parameters
 
-colorScheme = "blowfish"
+colorScheme = "congo"
 defaultAppearance = "dark" # valid options: light or dark
 autoSwitchAppearance = false
 defaultBackgroundImage = "img/elden-ring-backgroud.png"
@@ -23,7 +23,7 @@ mainSections = ["articels", "recommend", "notes"]
  # showMenu = true
   showCopyright = true
   showThemeAttribution = true
-  showAppearanceSwitcher = true
+  showAppearanceSwitcher = false
   showScrollToTop = true
 
 [homepage]
@@ -61,9 +61,11 @@ mainSections = ["articels", "recommend", "notes"]
   showWordCount = true
   showSummary = true
   showComments = false
-  sharingLinks = [ "email", "weibo", "reddit", "twitter"]
+  sharingLinks = [ "email",  "twitter", "telegram"]
   layoutBackgroundBlur = true
   layoutBackgroundHeaderSpace = false
+  showRelatedContent = true
+  relatedContentLimit = 3
 
 [list]
   showBreadcrumbs = false
@@ -83,6 +85,9 @@ mainSections = ["articels", "recommend", "notes"]
 
 [taxonomy]
   showTermCount = true
+  showHero = true
+  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+
 
 [firebase]
   # apiKey = "XXXXXX"
