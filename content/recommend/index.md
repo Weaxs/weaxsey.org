@@ -13,6 +13,7 @@ showTaxonomies : false
 showWordCount : true
 showSummary : false
 sharingLinks : false
+showComments : false
 showEdit: false
 showViews: false
 showLikes: false

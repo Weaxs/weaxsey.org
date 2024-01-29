@@ -11,6 +11,7 @@ showReadingTime : false
 showTableOfContents : true
 showTaxonomies : false
 showWordCount : false
+showComments : false
 showSummary : false
 sharingLinks : false
 showEdit: false

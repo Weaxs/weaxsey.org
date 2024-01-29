@@ -23,7 +23,7 @@ mainSections = ["articels", "recommend", "notes"]
  # showMenu = true
   showCopyright = true
   showThemeAttribution = true
-  showAppearanceSwitcher = false
+  showAppearanceSwitcher = true
   showScrollToTop = true
 
 [homepage]
@@ -60,7 +60,7 @@ mainSections = ["articels", "recommend", "notes"]
   showAuthorsBadges = false 
   showWordCount = true
   showSummary = true
-  showComments = false
+  showComments = true
   sharingLinks = [ "email",  "twitter", "telegram"]
   layoutBackgroundBlur = true
   layoutBackgroundHeaderSpace = false
