@@ -41,16 +41,19 @@
 
 [[footer]]
   name = "标签"
+  pre = "tag"
   pageRef = "tags"
   weight = 10
 
 [[footer]]
   name = "推荐"
+  pre = "lightbulb"
   pageRef = "recommend"
   weight = 20
   
 [[footer]]
   name = "统计"
+  pre = "statistics"
   url = "https://umami.weaxsey.org/share/bfDoQvG6gOqUYRbN/blog"
   weight = 30
 
