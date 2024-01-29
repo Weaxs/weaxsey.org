@@ -56,6 +56,11 @@ layoutBackgroundHeaderSpace: false
             <td>技术</td>
             <td><a href="https://jimmysong.io/"> Jimmy Song</a></td>
         </tr>
+        <tr>
+            <td>李乾坤的博客</td>
+            <td>技术</td>
+            <td><a href="https://qiankunli.github.io/"> Jimmy Song</a></td>
+        </tr>
     </tbody>
 </table>
 
