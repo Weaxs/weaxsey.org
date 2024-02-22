@@ -9,7 +9,7 @@ tags: ["编程框架"]
 ---
 
 
-## hugo搭建
+## Hugo 及其镜像
 &emsp;&emsp;具体文件详见 [HUGO安装文档](https://gohugo.io/installation/)，下面主要解释一下docker部署的方式。
 {{< alert "circle-info">}}
 **docker镜像地址**：https://hub.docker.com/r/klakegg/hugo
@@ -130,6 +130,7 @@ path = "github.com/nunocoracao/blowfish/v2"
 ```
 3. 将根目录引用到镜像内的/src目录下，启动docker即可
 
+&emsp;&emsp;使用blowfish搭建博客，具体参考[文档](https://nunocoracao.github.io/blowfish/docs/)
 
 ### 自定义浏览器角标
 &emsp;&emsp;在[favicon.io](https://favicon.io/)讲自己的图片生成为各种尺寸的icon，直接解压在favicon.io下载好的icon压缩包，并放在/static目录下即可
@@ -138,9 +139,114 @@ path = "github.com/nunocoracao/blowfish/v2"
 &emsp;&emsp;将自定义的svg文件放在/asserts/icons目录下，为了使ICON和主题自适应，需要在svg文件中添加属性 fill="currentColor" 如下：
 ```svg
 <svg>
-    <<path fill="currentColor" d="xxx"/>
+    <path fill="currentColor" d="xxx"/>
 </svg>
 ```
 
-### blowfish文档
-&emsp;&emsp;使用blowfish搭建博客，具体参考[文档](https://nunocoracao.github.io/blowfish/docs/)
+### 中文字符数问题
+&emsp;&emsp;需要在 `config/_default/config.toml` 中添加属性，如下：
+```toml
+hasCJKLanguage = true
+```
+
+### 评论插件
+&emsp;&emsp;Hugo中的评论组件/服务可以参考 [Comments](https://gohugo.io/content-management/comments/)。这里给出了十几种开源方案，大部分方案需要`Docker`或者`Kubernetes`部署。
+此外有两种需要依赖 Github Discussions 或者 Github issues 的评论组件——[giscus](https://giscus.app/) 和 [utterances](https://utteranc.es/)。下面以[giscus](https://giscus.app/)为例。
+
+&emsp;&emsp;在 blowfish 主题中添加 comment 可以参考 [blowfish-Comments](https://blowfish.page/docs/partials/#comments)。
+
+&emsp;&emsp;简单描述一下，添加文件 `layouts/partials/comments.html`，具体的内容参考[giscus](https://giscus.app/) 中的示例：
+```html
+<script src="https://giscus.app/client.js"
+        data-repo="[在此输入仓库]"
+        data-repo-id="[在此输入仓库 ID]"
+        data-category="[在此输入分类名]"
+        data-category-id="[在此输入分类 ID]"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+```
+
+
+## GitHub Page 部署 Hugo
+&emsp;&emsp;在 `.github/workflows` 目录下添加yml，文档参考[Host on GitHub Pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/)，具体的yml内容示例如下：
+```yml
+name: Deploy Hugo site to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # 构建
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Hugo 版本
+      HUGO_VERSION: 0.121.0
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+      - name: Install Node.js dependencies
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo \
+            --minify \
+            # 博客地址
+            --baseURL "https://example.com"
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          # hugo 构建后默认生成到 public 目录下
+          path: ./public
+
+  # 部署
+  deploy:
+    environment:
+      name: github-pages
+      # 博客地址
+      url: https://example.com
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+```
