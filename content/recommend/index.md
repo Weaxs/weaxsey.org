@@ -62,6 +62,11 @@ layoutBackgroundHeaderSpace: false
             <td>技术</td>
             <td><a href="https://qiankunli.github.io/"> Jimmy Song</a></td>
         </tr>
+        <tr>
+            <td>Thoughtworks 洞见</td>
+            <td>技术</td>
+            <td><a href="https://insights.thoughtworks.cn/"> Thoughtworks </a></td>
+        </tr>
     </tbody>
 </table>
 
