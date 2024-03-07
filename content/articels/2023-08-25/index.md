@@ -204,7 +204,7 @@ Blowfish 支持的 analytics 目录在`layouts/partials/analytics`，在这里�
 
 这里给一段示例代码，html文件如下：
 ```html
-<script async src="https://{{ site.Params.umamiAnalytics.domain }}/script.js" data-website-id="{{ site.Params.umamiAnalytics.websiteid }}">
+<script async >
     const type = document.head.querySelector('meta[property = "og:type"]').getAttribute('content');
     let title = document.head.querySelector('meta[property = "og:title"]').getAttribute('content');
     let url = document.head.querySelector('meta[property = "og:url"]').getAttribute('content');

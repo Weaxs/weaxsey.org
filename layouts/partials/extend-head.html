@@ -1,5 +1,7 @@
 {{ if isset site.Params.umamiAnalytics "domain" }}
 <script async src="https://{{ site.Params.umamiAnalytics.domain }}/script.js" data-website-id="{{ site.Params.umamiAnalytics.websiteid }}">
+</script>
+<script async>
     const type = document.head.querySelector('meta[property = "og:type"]').getAttribute('content');
     let title = document.head.querySelector('meta[property = "og:title"]').getAttribute('content');
     let url = document.head.querySelector('meta[property = "og:url"]').getAttribute('content');
@@ -7,9 +9,5 @@
 </script>
 {{ else }}
 <script async src="https://analytics.umami.is/script.js" data-website-id="{{ site.Params.umamiAnalytics.websiteid }}">
-    const type = document.head.querySelector('meta[property = "og:type"]').getAttribute('content');
-    let title = document.head.querySelector('meta[property = "og:title"]').getAttribute('content');
-    let url = document.head.querySelector('meta[property = "og:url"]').getAttribute('content');
-    window.umami.track(type + ':' +title, {'url': url});
 </script>
 {{ end }}
