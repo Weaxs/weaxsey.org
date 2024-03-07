@@ -250,3 +250,10 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
 ```
+
+## 集成 Umami 的站点统计
+
+这部分写到另一个文章中了，具体可以看这个
+
+{{< article link="/articels/2023-08-25/" >}}
+

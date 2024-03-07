@@ -16,11 +16,12 @@ umami是一个用于网页访问统计的工具，是 Google Analytics的替代�
 
 我们先介绍以下以下几种方案：
 
-| 平台 | 部署管理方式 | 优点                       | 缺点 | 网站 |
-| --- | --- |--------------------------| --- | --- |
-| umami cloud | 平台管理 | 免费、快捷、简单                 | 免费的仅保留1年数据，仅3个网站 | https://cloud.umami.is/ |
-| Netlify + Neon | 自运维部署。Neon部署PostgreSQL，Netlify部署umami。  | 免费，数据可以永久保留，统计数据无限制      | 部署麻烦，需要2个平台，主要因为Netlify不能部署DB | https://www.netlify.com/  https://neon.tech/ |
-| Railway | 自运维部署。Railway上部署umami和PostgreSQL。 | 部署相对方便，自运维数据永久保留，统计数据无限制 | 不免费，最少$5/month | https://railway.app/ |
+| 平台 | 部署管理方式 | 优点                       | 缺点 | 网站                                               |
+| --- | --- |--------------------------| --- |--------------------------------------------------|
+| umami cloud | 平台管理 | 免费、快捷、简单                 | 免费的仅保留1年数据，仅3个网站 | https://cloud.umami.is/                          |
+| Netlify + Neon | 自运维部署。Neon部署PostgreSQL，Netlify部署umami。  | 免费，数据可以永久保留，统计数据无限制      | 部署麻烦，需要2个平台，主要因为Netlify不能部署DB | https://www.netlify.com/  https://neon.tech/     |
+| Railway | 自运维部署。Railway上部署umami和PostgreSQL。 | 部署相对方便，自运维数据永久保留，统计数据无限制 | 不免费，最少$5/month | https://railway.app/                             |
+| Vercel + TiDB Cloud | 自运维部署。TiDB Cloud上直接开通 TiDB Serverless，并关联 Vercel 部署umami。 | 免费、简单、快捷，监控网站无限制，可以绑自己的域名 | TiDB Cloud 数据免费存储 5G | https://vercel.com/ <br/> https://tidbcloud.com/ |
 
 > ✨ 具体的计费方式、规格等问题可以查看平台的Pricing
 >
@@ -84,8 +85,23 @@ umami是一个用于网页访问统计的工具，是 Google Analytics的替代�
 ![TrackingCode2.png](TrackingCode2.png)
 
 ### 参考
-
 [https://umami.is/docs/running-on-railway](https://umami.is/docs/running-on-railway)
+
+## **Vercel + TiDB Cloud (推荐)**
+### 部署
+
+1. 分别注册 Vercel 和 TiDB Cloud
+2. 在 TiDB Cloud 中创建 TiDB Serverless，并创建对应数据库
+3. 在 Vercel 中创建 umami 的项目，这里和 **Railway** 的操作没什么区别，不再赘述。
+4. 把 TiDB Cloud 集成到Vercel对应的项目，这部分内容参考 TiDB 的文档 [Integrate TiDB Cloud with Vercel](https://docs.pingcap.com/tidbcloud/integrate-tidbcloud-with-vercel)
+
+![Vercel.png](Vercel.png)
+![Link Vercel and TiDB Cloud.png](Link%20Vercel%20and%20TiDB%20Cloud.png)
+### 参考
+
+[https://umami.is/docs/running-on-vercel](https://umami.is/docs/running-on-vercel)
+
+[Integrate TiDB Cloud with Vercel](https://docs.pingcap.com/tidbcloud/integrate-tidbcloud-with-vercel)
 
 ## 在 Hugo 框架下配置
 
@@ -182,6 +198,18 @@ Blowfish 支持的 analytics 目录在`layouts/partials/analytics`，在这里�
 [umamiAnalytics]
   websiteid = "xxxxx"
   domain = "umami.example.com"
+```
+
+### 配置 TrackEvent
+
+这里给一段示例代码，html文件如下：
+```html
+<script async src="https://{{ site.Params.umamiAnalytics.domain }}/script.js" data-website-id="{{ site.Params.umamiAnalytics.websiteid }}">
+    const type = document.head.querySelector('meta[property = "og:type"]').getAttribute('content');
+    let title = document.head.querySelector('meta[property = "og:title"]').getAttribute('content');
+    let url = document.head.querySelector('meta[property = "og:url"]').getAttribute('content');
+    window.umami.track(type + ':' +title, {'url': url});
+</script>
 ```
 
 ## umami Tracker 参数
