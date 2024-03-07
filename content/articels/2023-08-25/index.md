@@ -208,7 +208,7 @@ Blowfish 支持的 analytics 目录在`layouts/partials/analytics`，在这里�
    const type = document.head.querySelector('meta[property = "og:type"]').getAttribute('content');
    let title = document.head.querySelector('meta[property = "og:title"]').getAttribute('content');
    let url = document.head.querySelector('meta[property = "og:url"]').getAttribute('content');
-   window.umami.track(type + ':' +title, {'url': url});
+   umami.track(type + ':' +title, {'url': url});
 </script>
 ```
 
