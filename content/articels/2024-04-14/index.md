@@ -326,7 +326,7 @@ func (fr *Framer) readMetaFrame(hf *HeadersFrame) (*MetaHeadersFrame, error) {
 
 不仅如此，`emit` 回调中的产生的其他异常也不会返回或打断循环，例如 headerFieldNameError、errPseudoAfterRegular 和 headerFieldValueError 也只是设置 `emitEnabled` 为`false` 。
 
-这会使得攻击者在发送超过 **MAX_HEADER_LIST_SIZE** 的 **CONTINUATION** 帧后，server 端并不会停止接收 **CONTINUATION** 帧，这意味着攻击者可以发任意数量的 **CONTINUATION** 且一直不传递`END_HEADERS` 标识，以此来消耗无止境的消耗服务器的资源。
+这会使得攻击者在发送超过 **MAX_HEADER_LIST_SIZE** 的 **CONTINUATION** 帧后，server 端并不会停止接收 **CONTINUATION** 帧，这意味着攻击者可以发任意数量的 **CONTINUATION** 且一直不传递`END_HEADERS` 标识，以此来持续地消耗服务器的资源。
 
 ### GO-2024-2687
 
