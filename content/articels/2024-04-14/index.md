@@ -231,7 +231,7 @@ CONTINUATION Flood 攻击正是针对第二点，在发送最后一个 **CONTINU
 
 ![continuation_bad_light.png](continuation_bad_light.png)
 
-这种攻击会导致四种风险：
+这种攻击会导致三种安全风险：
 
 - CPU占用量耗尽。读取额外的 Header 会导致 CPU 使用率升高，从而让其他响应变慢。这种风险往往是因为活跃连接过多，导致 server 无法及时响应其他请求导致的。解决的办法就是通过优化活跃连接数、提高连接处理效率、释放不活跃连接等方式。
 - OOM内存溢出。个别HTTP/2 server 的实现比较简单，仅仅是将 **CONTINUATION** 读入内存，从而导致单个连接就可以导致 OOM；如果 server 端仅对 headers 大小进行了限制，但是没有限制超时时间，这样攻击者也可以请求多个连接来引发OOM。
