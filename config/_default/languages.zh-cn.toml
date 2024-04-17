@@ -23,3 +23,6 @@ dateFormat = "2006-01-02"
     { steam = "https://steamcommunity.com/id/weaxs" },
     { nintendo-switch = "/links/nintendo-switch" },
   ]
+
+[params]
+  copyright = "©{ year } [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans)"
