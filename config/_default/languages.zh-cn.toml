@@ -1,16 +1,16 @@
 languageCode = "zh-cn"
 languageName = "cn"
-displayName = "🇨🇳"
-isoCode = "zh-cn"
 weight = 1
-rtl = false
-
 title = "豆逗子的小黑屋"
-logo = "img/FF7cc.png"
-description = "欢迎来到豆逗子的小黑屋"
-# copyright = "Copy, _right?_ :thinking_face:"
 
-dateFormat = "2006-01-02"
+[params]
+  displayName = "🇨🇳"
+  isoCode = "zh-cn"
+  description = "欢迎来到豆逗子的小黑屋"
+  dateFormat = "2006-01-02"
+  rtl = false
+  logo = "img/FF7cc.png"
+  copyright = "©{ year } [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans)"
 
 [author]
   name = "Weaxs"
@@ -23,6 +23,3 @@ dateFormat = "2006-01-02"
     { steam = "https://steamcommunity.com/id/weaxs" },
     { nintendo-switch = "/links/nintendo-switch" },
   ]
-
-[params]
-  copyright = "©{ year } [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans)"
