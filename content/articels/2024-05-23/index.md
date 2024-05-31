@@ -2,7 +2,7 @@
 title: "基于 LLM 推动游戏叙事"
 showSummary: true
 summary: "5月初看到一篇基于 LLM 开发文本游戏的论文感觉挺有意思，但是拖延症一直到现在才发"
-date: 2024-05-25
+date: 2024-05-23
 tags: ["论文笔记"]
 ---
 
