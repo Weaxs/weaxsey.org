@@ -128,6 +128,7 @@ layoutBackgroundHeaderSpace: false
             </td>
             <td >2022 - Present</td>
         </tr>
+        <!--
         <tr>
             <td><img src="economy/The New Lombard Street.jpeg" alt="The New Lombard Street"/></td>
             <td>The New Lombard Street <br/> 新伦巴第街</td>
@@ -142,6 +143,7 @@ layoutBackgroundHeaderSpace: false
             <td><a href="economy/Perry Mehrling - Money and Empire.pdf" target="_blank">书籍链接</a></td>
             <td >2022 - Present</td>
         </tr>
+        -->
         <tr>
              <td><img src="economy/value_at_risk.jpg" alt="聪明投资者的成功之道——好生意、好公司、好价格"/></td>
              <td>聪明投资者的成功之道——好生意、好公司、好价格</td>
@@ -155,6 +157,13 @@ layoutBackgroundHeaderSpace: false
             <td>徐鸿鹄</td>
             <td><a href="https://github.com/lostinet/Finance-at-a-loss" target="_blank">github pdf</a></td>
             <td >2023 - Present</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>熊猫笔记汇编</td>
+            <td>熊猫交易员昌明</td>
+            <td><a href="economy/熊猫笔记汇编.pdf" target="_blank">书籍链接</a></td>
+            <td >2024 - Present</td>
         </tr>
     </tbody>
 
@@ -174,32 +183,39 @@ layoutBackgroundHeaderSpace: false
     </thead>
     <tbody>
         <tr>
-            <td><img src="coding/icyfenix.png"/></td>
+            <td><img src="coding/icyfenix.png" alt="凤凰架构"/></td>
             <td>凤凰架构——构建可靠的大型分布式系统</td>
             <td>周志明</td>
             <td><a href="https://icyfenix.cn/" target="_blank">凤凰架构电子书</a></td>
             <td >2023 - Present</td>
         </tr>
         <tr>
-            <td><img src="coding/从根儿上理解 MySQL.png"/></td>
+            <td><img src="coding/从根儿上理解 MySQL.png" alt="从根儿上理解 MySQL"/></td>
             <td>MySQL 是怎样运行的：从根儿上理解 MySQL</td>
             <td>小孩子4919</td>
             <td><a href="https://relph1119.github.io/mysql-learning-notes/#/" target="_blank">从根儿上理解MySQL电子书</a></td>
             <td >2023 - Present</td>
         </tr>
         <tr>
-            <td><img src="coding/大规模语言模型：从理论到实践.png"/></td>
+            <td><img src="coding/大规模语言模型：从理论到实践.png" alt="大规模语言模型：从理论到实践"/></td>
             <td>大规模语言模型：从理论到实践</td>
             <td>张奇 桂韬 郑锐 ⻩萱菁</td>
             <td><a href="https://intro-llm.github.io/" target="_blank">大规模语言模型：从理论到实践电子书</a></td>
             <td >2023 - Present</td>
         </tr>
         <tr>
-            <td><img src="https://github.com/ByteByteGoHq/system-design-101/raw/main/images/banner.jpg"/></td>
+            <td><img src="https://github.com/ByteByteGoHq/system-design-101/raw/main/images/banner.jpg"  alt="system-design-101"/></td>
             <td>system design 101</td>
             <td>ByteByteGoHq</td>
             <td><a href="https://github.com/ByteByteGoHq/system-design-101" target="_blank">github 电子书</a></td>
             <td >2023 - Present</td>
+        </tr>
+        <tr>
+            <td><img src="coding/大语言模型.jpg" alt="大语言模型"/></td>
+            <td>大语言模型</td>
+            <td>赵鑫 李军毅 周昆 唐天一 文继荣</td>
+            <td><a href="https://llmbook-zh.github.io/" target="_blank">github 电子书</a></td>
+            <td >2024 - Present</td>
         </tr>
     </tbody>
 </table>
