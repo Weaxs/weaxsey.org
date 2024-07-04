@@ -30,9 +30,16 @@
   weight = 40
 
 [[main]]
+  identifier = "github"
   pre = "github"
   url = "https://github.com/Weaxs"
   weight = 50
+
+[[main]]
+  identifier = "travelling"
+  pre = "travelling"
+  url = "https://www.travellings.cn/go.html"
+  weight = 60
 
 
 # -- Footer Menu --
@@ -56,6 +63,12 @@
   pre = "statistics"
   url = "https://umami.weaxsey.org/share/bfDoQvG6gOqUYRbN/blog"
   weight = 30
+
+[[footer]]
+  name = "开往"
+  pre = "travelling"
+  url = "https://www.travellings.cn/go.html"
+  weight = 40
 
 #[[footer]]
 #  name = "机核网"
